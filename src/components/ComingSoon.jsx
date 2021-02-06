@@ -28,9 +28,7 @@ const Top = styled(Paragraph)`
 `;
 
 const Bottom = styled(Paragraph)`
-  margin: 12px 0 0;
-  font-size: 20px;
-  font-weight: 500;
+  margin: 20px 0 0;
 `;
 
 const Span = styled.span`
@@ -83,7 +81,7 @@ const Logo = () => {
         </Top>
       </Box>
 
-      <Bottom>Coming soon.</Bottom>
+      <Bottom>In construction. Coming soon.</Bottom>
     </_ComingSoon>
   );
 };
