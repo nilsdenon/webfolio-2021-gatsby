@@ -7,15 +7,11 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: `Inter`,
-            variants: ['400', '500', '700'],
-            subsets: [`latin`],
-          },
-        ],
+        google: {
+          families: ['Inter:400, 500, 700'],
+        },
       },
     },
     {

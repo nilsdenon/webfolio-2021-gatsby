@@ -9,7 +9,7 @@ const StyledComingSoon = styled.div`
   justify-content: center;
   align-items: center;
   flex-flow: column wrap;
-  font-family: ${fontStack.default};
+  /* font-family: ${fontStack.default}; */
   color: ${colors.grays.darkGray};
 `;
 
@@ -18,7 +18,7 @@ const Box = styled.div`
 `;
 
 const Paragraph = styled.p`
-  font-family: ${fontStack.default};
+  /* font-family: ${fontStack.default}; */
   color: ${colors.grays.darkGray};
 `;
 
