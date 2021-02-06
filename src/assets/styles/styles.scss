@@ -1,0 +1,14 @@
+@import '../../../node_modules/scss-reset/_reset';
+@import 'vars';
+@import 'coming-soon';
+
+body {
+  font-family: $font-stack;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}

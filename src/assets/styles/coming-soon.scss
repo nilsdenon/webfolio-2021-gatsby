@@ -1,0 +1,47 @@
+@import './vars';
+
+.coming-soon,
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.coming-soon {
+  font-family: $font-stack;
+  flex-flow: column wrap;
+  color: $dark-gray;
+  img {
+    align-self: center;
+  }
+  p {
+    display: flex;
+    &.logo {
+      margin: -5px 0 0 10px;
+    }
+    &.message {
+      margin: 20px 0 0;
+    }
+  }
+}
+
+.title {
+  font-weight: 700;
+  position: relative;
+  &:after {
+    content: '';
+    background: $dark-gray;
+    display: inline-block;
+    width: 1px;
+    height: 30px;
+    margin: 0 10px;
+  }
+}
+
+.slogan {
+  font-weight: 300;
+}
+
+.box {
+  display: flex;
+}
