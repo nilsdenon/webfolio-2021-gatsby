@@ -1,16 +1,12 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
+import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
+import Header from './header';
+import { createGlobalStyle } from 'styled-components';
+import { mainStyles } from '../theme/webfolio';
 
-import React from "react"
-import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby"
-
-import Header from "./header"
-import "./layout.css"
+const GlobalStyles = createGlobalStyle`
+  ${mainStyles}
+`;
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -21,10 +17,11 @@ const Layout = ({ children }) => {
         }
       }
     }
-  `)
+  `);
 
   return (
     <>
+      <GlobalStyles />
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -45,11 +42,7 @@ const Layout = ({ children }) => {
         </footer>
       </div>
     </>
-  )
-}
+  );
+};
 
-Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
-
-export default Layout
+export default Layout;
