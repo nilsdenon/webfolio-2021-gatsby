@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby';
 import LogoImage from '../assets/images/dp-logo.png';
 import { fontStack, colors } from '../theme/webfolio';
 
-const _ComingSoon = styled.div`
+const StyledComingSoon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -67,7 +67,7 @@ const Logo = () => {
   `);
 
   return (
-    <_ComingSoon>
+    <StyledComingSoon>
       <Box>
         <img
           width="34"
@@ -82,16 +82,10 @@ const Logo = () => {
       </Box>
 
       <Bottom>In construction. Coming soon.</Bottom>
-    </_ComingSoon>
+    </StyledComingSoon>
   );
 };
 
-const ComingSoon = ({}) => {
-  return (
-    <>
-      <Logo />
-    </>
-  );
-};
+const ComingSoon = () => <Logo />;
 
 export default ComingSoon;

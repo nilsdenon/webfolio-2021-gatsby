@@ -1,10 +1,8 @@
 import { css } from 'styled-components';
 import reset from 'styled-reset';
-import InterUprgrigthVar from '../assets/fonts/inter/Inter-upright-var.woff2';
-import InterItalicVar from '../assets/fonts/inter/Inter-italic-var.woff2';
 
 export const fontStack = {
-  default: `"Inter var", -apple-system, BlinkMacSystemFont,
+  default: `"Inter", -apple-system, BlinkMacSystemFont,
       "Helvetica Neue", Helvetica, sans-serif;`,
 };
 
@@ -16,28 +14,9 @@ export const measurements = {
 };
 
 const Typography = css`
-  @font-face {
-    font-family: 'Inter var';
-    font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-    font-style: normal;
-    font-display: swap;
-    src: url(${InterUprgrigthVar}) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Inter var';
-    font-weight: 100 900; /* stylelint-disable-line font-weight-notation */
-    font-style: italic;
-    font-display: swap;
-    src: url(${InterItalicVar}) format('woff2');
-  }
-  @supports (font-variation-settings: normal) {
-    body {
-      font-family: ${fontStack.default};
-    }
-  }
   body {
     font-family: ${fontStack.default};
+    font-weight: 400;
     font-size: ${measurements.fontSize};
     letter-spacing: -0.015em;
   }
