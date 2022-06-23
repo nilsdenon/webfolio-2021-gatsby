@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Damien Pierre `,
-    slogan: `Webfolio 2021`,
+    slogan: `Webfolio 2022`,
     author: `nilsdenon`,
   },
   plugins: [
